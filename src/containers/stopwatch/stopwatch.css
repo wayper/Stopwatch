@@ -1,0 +1,30 @@
+.stopwatch-wrap {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 1em;
+    border: 4px solid rgb(47, 47, 47);
+    border-radius: 10px;
+    max-width: 16em;
+    background-color: rgb(37, 36, 36);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.stopwatch-scoreboard {
+    padding: 0 10px;
+    margin: 0 auto;
+    background-color: rgb(241, 125, 16);
+    border: 3px solid rgb(58, 56, 56);
+    border-radius: 7px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.digital-cell {
+    display: inline;
+}
+.digital-cell-millisecond {
+    display: inline;
+    font-size: 20px;
+    margin-left: 5px; 
+}
