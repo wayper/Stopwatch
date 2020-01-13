@@ -1,4 +1,6 @@
 .stopwatch-wrap {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 1em;
@@ -23,8 +25,9 @@
 .digital-cell {
     display: inline;
 }
+
 .digital-cell-millisecond {
     display: inline;
     font-size: 20px;
-    margin-left: 5px; 
+    margin-left: 5px;
 }
