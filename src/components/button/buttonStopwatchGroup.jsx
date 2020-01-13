@@ -1,55 +1,55 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './button.css';
-import Button from './buttonCommonProps';
+import "./button.css";
+import Button from "./buttonCommonProps";
 
 class ButtonStopwatchGroup extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeBtnStart: true, // BUTTON START
-            activeBtnStop: false, // BUTTON STOP
-            activeBtnReset: false, // BUTTON RESET
-        }
-    }
-    
-    // Methods for determining the activity of buttons
-    // and calling stopwatch control methods
+  state = {
+    activeBtnStart: true, // BUTTON START
+    activeBtnStop: false, // BUTTON STOP
+    activeBtnReset: false // BUTTON RESET
+  };
 
-    hendleClickStart = () => {
-        this.props.onStartClick();
-        this.setState({
-            activeBtnStart: false,
-            activeBtnStop: true,
-            activeBtnReset: false,
-        });    }
+  // Methods for determining the activity of buttons
+  // and calling stopwatch control methods
 
-    hendleClickStop = () => {
-        this.props.onStopClick();
-        this.setState({
-            activeBtnStart: true,
-            activeBtnStop: false,
-            activeBtnReset: true,
-        });    }
+  handleClickStart = () => {
+    this.props.onStartClick();
+    this.setState({
+      activeBtnStart: false,
+      activeBtnStop: true,
+      activeBtnReset: false
+    });
+  };
 
-    hendleClickReset = () => {
-        this.props.onResetClick();
-        this.setState({
-            activeBtnStart: true,
-            activeBtnStop: false,
-            activeBtnReset: false,
-        });    }
+  handleClickStop = () => {
+    this.props.onStopClick();
+    this.setState({
+      activeBtnStart: true,
+      activeBtnStop: false,
+      activeBtnReset: true
+    });
+  };
 
-    render() {
-        const {activeBtnStart, activeBtnStop, activeBtnReset} = this.state;
-        return (
-            <div className="control-panel">
-                <Button disabled={!activeBtnStart} active={activeBtnStart} name="Start" onClick={this.hendleClickStart} />
-                <Button disabled={!activeBtnStop} active={activeBtnStop} name="Stop" onClick={this.hendleClickStop}/>
-                <Button disabled={!activeBtnReset} active={activeBtnReset} name="Reset" onClick={this.hendleClickReset}/>
-            </div>
-        )
-    }
+  handleClickReset = () => {
+    this.props.onResetClick();
+    this.setState({
+      activeBtnStart: true,
+      activeBtnStop: false,
+      activeBtnReset: false
+    });
+  };
+
+  render() {
+    const { activeBtnStart, activeBtnStop, activeBtnReset } = this.state;
+    return (
+      <div className="control-panel">
+        <Button disabled={!activeBtnStart} active={activeBtnStart} name="Start" onClick={this.handleClickStart} />
+        <Button disabled={!activeBtnStop} active={activeBtnStop} name="Stop" onClick={this.handleClickStop} />
+        <Button disabled={!activeBtnReset} active={activeBtnReset} name="Reset" onClick={this.handleClickReset} />
+      </div>
+    );
+  }
 }
 
 export default ButtonStopwatchGroup;
