@@ -1,3 +1,8 @@
+# Stopwatch
+
+![Presentation picture](https://github.com/wayper/Stopwatch/blob/master/src/preview.png "Presentation picture")
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
